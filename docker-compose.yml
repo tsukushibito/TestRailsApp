@@ -21,6 +21,8 @@ services:
     depends_on:
       - postgres
     env_file: "./common.env"
+    stdin_open: true
+    tty: true
   postgres:
     image: postgres:latest
     restart: always
