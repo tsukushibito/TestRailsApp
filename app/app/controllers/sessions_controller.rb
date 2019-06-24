@@ -18,5 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    logger.debug('Called SessionsController.destroy')
+    log_out
+    redirect_to root_url
   end
 end
